@@ -1,0 +1,28 @@
+#@layout()
+#define main()
+<h1>JFinal Demo 项目首页</h1>
+<div class="table_box">
+	<p>欢迎来到 JFinal极速开发世界！</p>
+	
+	<br><br><br>
+	
+	本Demo采用 JFinal Template 作为视图文件。
+	点击<a href="/blog"><b>此处</b></a>开始试用Demo。
+
+</div>
+<form action="girl/saveGirl">
+
+</form>
+<script>
+    $(function(){
+        $.ajax({
+            url:"girl/saveGirl",
+            type:'POST',
+            dataType:'json',
+            data:{"girl.name":"李四","girl.id":3,"girl.age":27}
+        });
+
+    });
+
+</script>
+#end
